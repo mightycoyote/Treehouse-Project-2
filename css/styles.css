@@ -1,0 +1,22 @@
+/* Global set-up */
+
+* { 
+    box-sizing: border-box;
+  }
+
+body {
+    font-family: 'Inter', sans-serif;
+  }
+
+/* Section styles */
+
+address {
+  font-style: normal;
+}
+
+address span {
+  font-weight: bolder;
+}
+
+/* Styles for larger screens */
+
