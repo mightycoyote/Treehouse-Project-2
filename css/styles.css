@@ -7,19 +7,8 @@
 body {
   font-family: 'Inter', sans-serif;  
   color: #383838;
-  margin: 1rem;
   text-align: center;
-}
-
-nav ul {
-  padding: 0;
-}
-
-nav li {
-  padding-left: 0;
-  margin: 0;
-  list-style: none;
-  display: block;
+  background-color: whitesmoke;
 }
 
 h2, 
@@ -27,20 +16,60 @@ nav li {
   font-weight: bold;
   text-transform: uppercase;
   font-size: 90%;
- 
+}
+
+footer h2 {
+  margin-bottom: 30px;
 }
 
 h3 {
   font-weight: 500;
+  margin-top: 30px;
 }
 
 /* Section styles */
+
+nav ul {
+  padding: 0;
+}
+
+nav li {
+  padding: 10px;
+  margin: 5px;
+  list-style: none;
+  display: block;
+  background-color: white;
+}
 
 .intro,
 .contact p,
 .contact address {
   color: dimgray;
   font-size: 110%;
+}
+
+.intro {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.top,
+footer {
+  padding: 0 15px;
+}
+
+.portfolio {
+  background-color: white;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.portfolio p {
+  padding: 0px 30px;
+}
+
+.chat {
+  margin-bottom: 2rem;
 }
 
 address {
@@ -51,17 +80,23 @@ address span {
   font-weight: bold;
 }
 
+.contact {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
 .footer-nav {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  margin-top: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0 auto;
 }
 
 .footer-left {
   font-weight: bold;
   float: left;
   display: block;
-
+  padding: 10px;
+  margin: 0;
 }
 
 .footer-right {
@@ -70,6 +105,19 @@ address span {
   font-size: 80%;
   float: right;
   display: block;
+  padding: 10px;
+  margin: 4px 0 0 0;
+}
+
+/* Page elements */
+
+.intro img {
+  width: 200px;
+}
+
+.card img {
+  width: 285px;
+  margin-top: 30px;
 }
 
 /* Styles for larger screens */
