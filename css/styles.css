@@ -8,7 +8,7 @@ body {
   font-family: 'Inter', sans-serif;  
   color: #383838;
   text-align: center;
-  background-color: whitesmoke;
+  background-color: whitesmoke;  
 }
 
 h2, 
@@ -28,6 +28,23 @@ h3 {
   margin-top: 30px;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: #383838;
+}
+
+a:hover {
+  color: black;
+}
+
+address {
+  display: block;
+  padding-top: 1rem;
+}
+
 /* Section styles */
 
 nav ul {
@@ -42,36 +59,38 @@ nav li {
   background-color: white;
 }
 
-.intro,
+header p,
 .contact p,
 .contact address {
   color: dimgray;
   font-size: 110%;
 }
 
-.intro {
-  padding-top: 30px;
-  padding-bottom: 30px;
+header {
+  padding: 0 15px 30px;
 }
 
-.top,
-footer {
-  padding: 0 15px;
+header h1 {
+  padding: .5rem;
 }
 
 .portfolio {
   background-color: white;
-  padding-top: 30px; /* this padding needed for bg color line */
+  padding-top: 40px; /* this padding needed for bg color line */
   padding-bottom: 10px;
   font-size: 90%;
 }
 
 .portfolio h2 {
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 .portfolio p {
   padding: 0 30px 30px;
+}
+
+footer {
+  padding: 0 15px;
 }
 
 .chat {
@@ -100,7 +119,6 @@ address span {
 .footer-left {
   font-weight: bold;
   float: left;
-  display: block;
   padding: 10px;
   margin: 0;
 }
@@ -110,8 +128,8 @@ address span {
   font-weight: 800;
   font-size: 80%;
   float: right;
-  display: block;
-  margin: 4px 0 0 0;
+  padding: 10px;
+  margin: 5px 0 0 0;
 }
 
 .footer-right p {
@@ -120,12 +138,22 @@ address span {
 
 /* Page elements */
 
-.intro img {
-  width: 200px;
+.profile-pic img {
+  width: 100%;
+  height: auto;
 }
 
 .card img {
-  width: 285px;
+  width: 100%;
+  height: auto;
+}
+
+.profile-pic {
+  padding: 30px 60px 10px;
+}
+
+.img-wrapper {
+  padding: 0 30px;
 }
 
 /* Magical changing footer nav */
@@ -138,28 +166,34 @@ address span {
 /* Styles for larger screens */
 
 @media (min-width: 768px) {
-  h1 {
-    margin-top: 40px;
-  }
-  
   nav li,
   .footer-nav-bigger li {
     background-color: whitesmoke;
     display: inline-block;
   }
 
-  .intro img {
-    float: right;
-    margin-left: 15px;
-  }
-
-  .intro p {
-    text-align: left;
+  nav li {
     margin-top: 0;
   }
 
-  .top {
-    padding: 40px 30px;
+  header h1 {
+    margin-bottom: 0;
+  }
+
+  .profile {
+    padding: 20px;
+  }
+
+  .profile-pic {
+    padding: 0;
+    float: right;
+    margin-left: 30px;
+    max-width: 40%;
+  }
+
+  .profile p {
+    text-align: left;
+    margin-top: 0;
   }
 
   .portfolio {
@@ -173,14 +207,19 @@ address span {
     vertical-align: top;
   }
 
-  .card img {
-    width: 310px;
+  .img-wrapper {
+    padding: 10px;
   }
 
   .chat {
     display: block;
     width: 68%;
     margin: auto;
+    padding-bottom: 1rem;
+  }
+
+  .contact {
+    padding-bottom: 3rem;
   }
 
   .footer-nav {
@@ -188,7 +227,13 @@ address span {
   }
 
   .footer-nav-bigger {
-    display: inline;
+    display: block;
+    padding-bottom: 20px;
+  }
+
+  .footer-right {
+    margin: 5px 0 0 0;
+    padding: 0;
   }
 
   .footer-nav-bigger li {
@@ -199,11 +244,8 @@ address span {
 }
 
 @media (min-width: 1024px) {
-  header {
-    float: left;
-  }
-
   header h1 {
+    float: left;
     margin-top: 10px;
   }
 
@@ -216,13 +258,17 @@ address span {
     margin-top: 0;
   }
 
-  .intro {
+  header {
     padding: 10px 0;
   }
 
-  .intro img {
-    width: 370px;
-    margin-left: 30px;
+  .profile-pic {
+    margin-left: 40px;
+  }
+
+  .profile {
+    display: block;
+    padding-top: 20px;
   }
 
   body {
@@ -233,9 +279,19 @@ address span {
     max-width: 33%;
   }
 
+  .card p {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   .chat {
     width: 55%;
   }
+
+  .contact {
+    padding-bottom: 50px;
+  }
+
 }
 
 /* Clearfix */
